@@ -184,7 +184,7 @@ f.fjAx<-function(y) f.cfab(f.FA(y))
  #initialization
 time<-list()
 k<-0
-for (loop_aw in seq(2,22,4)){
+for (loop_aw in 2){
   aw<-loop_aw
   for(loop_ab in 1){
     ab<-5 #note. we set no breeding copying above, so this is irrelevant
@@ -221,10 +221,10 @@ for (i in 2:30)
     ##   copy_winter copy_breeding dispersal generation
     ## 1           2             5         1          9
     ## 2           2             5         2          9
-    ## 3           6             5         1          4
-    ## 4           6             5         2          4
-    ## 5          10             5         1          3
-    ## 6          10             5         2          3
+    ## 3          NA            NA        NA         NA
+    ## 4          NA            NA        NA         NA
+    ## 5          NA            NA        NA         NA
+    ## 6          NA            NA        NA         NA
 
 ``` r
   write.csv(result, "humei_simulations3.csv")
