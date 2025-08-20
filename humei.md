@@ -188,8 +188,8 @@ for (loop_aw in seq(2,22,4)){
   aw<-loop_aw
   for(loop_ab in 1){
     ab<-5 #note. we set no breeding copying above, so this is irrelevant
-    for (loop_sigma in c(1:4)){
-      sigma<-loop_sigma/2
+    for (loop_sigma in c(1:2)){
+      sigma<-loop_sigma
     k<-k+1
   
   distribution[,1]<-f.FA(x) #breeding
@@ -219,12 +219,12 @@ for (i in 2:30)
 ```
 
     ##   copy_winter copy_breeding dispersal generation
-    ## 1           2             5       0.5          9
-    ## 2           2             5       1.0          9
-    ## 3           2             5       1.5          9
-    ## 4           2             5       2.0          9
-    ## 5           6             5       0.5          5
-    ## 6           6             5       1.0          4
+    ## 1           2             5         1          9
+    ## 2           2             5         2          9
+    ## 3           6             5         1          4
+    ## 4           6             5         2          4
+    ## 5          10             5         1          3
+    ## 6          10             5         2          3
 
 ``` r
   write.csv(result, "humei_simulations3.csv")
