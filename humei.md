@@ -264,7 +264,7 @@ pal<-c(rainbow(8, alpha = 1, rev = FALSE), "grey","grey","grey", "black", "black
 #plot(disp05$copy_winter~disp05$copy_breeding, pch=16, cex=1.5, col=pal[disp05$generation-1], bty="l", xlim=c(0,5.5), ylab="Copying parameter (a), winter", xlab="Copying parameter (a), ")
 #text(disp05$copy_breeding, disp05$copy_winter, as.character(disp05$generation), cex=0.8, col=pal[disp05$generation-1], pos=4)
 
-plot(data$copy_winter~data$dispersal, pch=16, cex=1.5, col=pal[data$generation-1], bty="l", xlim=c(0,2), ylab="Copying parameter (a), winter", xlab="Dispersal parameter, (s)")
+plot(data$copy_winter~data$dispersal, pch=16, cex=1.5, col=pal[data$generation-1], bty="l", xlim=c(0,2), ylab="Copying parameter, winter", xlab="Dispersal parameter")
 text(data$dispersal, data$copy_winter, as.character(data$generation), cex=0.8, col=pal[data$generation-1], pos=4)
 ```
 
