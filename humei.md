@@ -188,8 +188,8 @@ for (loop_aw in seq(2,22,4)){
   aw<-loop_aw
   for(loop_ab in 1){
     ab<-5 #note. we set no breeding copying above, so this is irrelevant
-    for (loop_sigma in c(1:6)){
-      sigma<-loop_sigma/3
+    for (loop_sigma in c(1:4)){
+      sigma<-loop_sigma/2
     k<-k+1
   
   distribution[,1]<-f.FA(x) #breeding
@@ -219,12 +219,16 @@ for (i in 2:30)
 ```
 
     ##   copy_winter copy_breeding dispersal generation
-    ## 1           2             5 0.3333333         11
-    ## 2           2             5 0.6666667          9
-    ## 3           2             5 1.0000000          9
-    ## 4           2             5 1.3333333          9
-    ## 5           2             5 1.6666667          9
-    ## 6           2             5 2.0000000          9
+    ## 1           2             5       0.5          9
+    ## 2           2             5       1.0          9
+    ## 3           2             5       1.5          9
+    ## 4           2             5       2.0          9
+    ## 5           6             5       0.5          5
+    ## 6           6             5       1.0          4
+
+``` r
+  write.csv(result, "humei_simulations3.csv")
+```
 
 ``` r
 library(ggpubr)
@@ -256,11 +260,11 @@ data<-read.csv("humei_simulations.csv")
 #disp2<-subset(data, copy_breeding<6 & dispersal==2)
 #disp05<-subset(data, copy_breeding<6 & dispersal==0.5)
 
-pal<-rainbow(8, alpha = 1, rev = FALSE)
+pal<-c(rainbow(8, alpha = 1, rev = FALSE), "grey","grey","grey", "black", "black", "black")
 #plot(disp05$copy_winter~disp05$copy_breeding, pch=16, cex=1.5, col=pal[disp05$generation-1], bty="l", xlim=c(0,5.5), ylab="Copying parameter (a), winter", xlab="Copying parameter (a), ")
 #text(disp05$copy_breeding, disp05$copy_winter, as.character(disp05$generation), cex=0.8, col=pal[disp05$generation-1], pos=4)
 
-plot(data$copy_winter~data$dispersal, pch=16, cex=1.5, col=pal[data$generation-1], bty="l", xlim=c(0,5.5), ylab="Copying parameter (a), winter", xlab="Dispersal parameter, (s)")
+plot(data$copy_winter~data$dispersal, pch=16, cex=1.5, col=pal[data$generation-1], bty="l", xlim=c(0,2), ylab="Copying parameter (a), winter", xlab="Dispersal parameter, (s)")
 text(data$dispersal, data$copy_winter, as.character(data$generation), cex=0.8, col=pal[data$generation-1], pos=4)
 ```
 
