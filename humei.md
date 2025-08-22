@@ -153,7 +153,7 @@ fit_bin <- glmer(Response~Year.of.recording+(1|recording)+(1|male),data=pratap,f
     ##  - Rescale variables?
 
 ``` r
-##this works for relaltively high dispersal. A refined version in python was (humei.py) ultimately used for the text figure##
+##this works for relaltively high dispersal. A refined version in python was (humei.py) ultimately used for the text figure ##
 
 x<-seq(-10,10, 0.01) #spatial domain, NOTE: may need to set to 0.001 intervals
 
