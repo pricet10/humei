@@ -153,7 +153,7 @@ fit_bin <- glmer(Response~Year.of.recording+(1|recording)+(1|male),data=pratap,f
     ##  - Rescale variables?
 
 ``` r
-x<-seq(-10,10, 0.01) #spatial domain, NOTE: may need to set to 0.001 intervals
+x<-seq(-10,10, 0.01) #spatial domain,NOTE: may need to set to 0.001 intervals
 
 result<-as.data.frame(matrix(nrow=100, ncol=4))
 colnames(result)<-c("copy_winter","copy_breeding", "dispersal", "generation")
