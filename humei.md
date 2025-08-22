@@ -1,7 +1,7 @@
 humei
 ================
 Trevor
-2025-08-20
+2025-08-22
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you
 execute code within the notebook, the results appear beneath the code.
@@ -16,8 +16,8 @@ library(lme4)
     ## Loading required package: Matrix
 
 ``` r
-playbk<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/VigneshPlaybacks/Vigplayback.csv")
-recordings<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/VigneshPlaybacks/Humei_Recording.csv")
+playbk<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/Playbacks/vignesh winter/VigPlayback.csv")
+recordings<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/Playbacks/vignesh winter/Humei_Recording.csv")
 str(playbk)
 ```
 
@@ -132,7 +132,7 @@ p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(
 ![](humei_files/figure-gfm/playback_plot-1.png)<!-- -->
 
 ``` r
-pratap<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/VigneshPlaybacks/Pratap_Playbacks.csv")
+pratap<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/Playbacks/pratap winter/Pratap_Playbacks.csv")
 p1<-ggplot(pratap, aes(x=Year.of.recording,y=Response))
 p2<-p1+ geom_count(aes(fill="#A4A4A433", alpha=0.5), shape = 21,colour = "black")
 p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
@@ -153,7 +153,9 @@ fit_bin <- glmer(Response~Year.of.recording+(1|recording)+(1|male),data=pratap,f
     ##  - Rescale variables?
 
 ``` r
-x<-seq(-10,10, 0.01) #spatial domain,NOTE: may need to set to 0.001 intervals
+##this works for relaltively high dispersal. A refined version in python was (humei.py) ultimately used for the text figure##
+
+x<-seq(-10,10, 0.01) #spatial domain, NOTE: may need to set to 0.001 intervals
 
 result<-as.data.frame(matrix(nrow=100, ncol=4))
 colnames(result)<-c("copy_winter","copy_breeding", "dispersal", "generation")
@@ -170,30 +172,31 @@ f.cfaw<-function(f) (1-exp(-aw*f))/(1-exp(-aw)) #copying function, winter season
 
 f.fjx<-function(y) f.cfab(f.fax(y)) #applies copying function to breeding distribution
 #f.fjx<-f.fax #this to see what happens if no breeding copying
-f.fw <- function(y) {integrate(function(y,x) sb(y)*f.gauss(x-y),-Inf,Inf,y)$value} #distribution of call in winter, applies dispersal function to post copying breeding season
+f.fw <- function(a) {integrate(function(a,x) sb(a)*f.gauss(x-a),-Inf,Inf,a)$value} #distribution of call in winter, applies dispersal function to post copying breeding season
 f.fw <- Vectorize(f.fw)
 f.fw1<-function(z) f.cfaw(f.fw(z)) #applies copying function to winter distribution
-f.fax<- function(y) {integrate(function(y,x) sw(y)*f.gauss(x-y),-Inf,Inf,y, subdivisions = 2000)$value} #breeding
+f.fax<- function(a) {integrate(function(a,x) sw(a)*f.gauss(x-a),-Inf,Inf,a, subdivisions = 10000)$value} #breeding
+
 f.fax <- Vectorize(f.fax) 
 
 f.FA<-function(x) ifelse(x>0 & x<1, 0.01, 0) #initial appearance
-f.fjAx<-function(y) f.cfab(f.FA(y))
-#f.fjAx<-f.FA #no breeding copying
+f.fjAx<-function(y) f.cfab(f.FA(y)) #breeding copying
 #library(convdistr); conv <- convolve(sw(x),(1/(sqrt(2*pi*sigma^2)) * exp(-x^2/(2*sigma^2))))#this gave same answer as integrate. 
 
  #initialization
 time<-list()
 k<-0
-for (loop_aw in 2){
+for (loop_aw in seq(2)){
   aw<-loop_aw
   for(loop_ab in 1){
-    ab<-5 #note. we set no breeding copying above, so this is irrelevant
-    for (loop_sigma in c(1:2)){
+    ab<-5 
+    for (loop_sigma in c(1)){
       sigma<-loop_sigma
     k<-k+1
   
   distribution[,1]<-f.FA(x) #breeding
-  distribution[,2]<-f.fjAx(x) #breeding after copying
+  #distribution[,2]<-f.fjAx(x) #breeding after copying
+  distribution[,2]<- distribution[,1] #breeding no copying
   sb<-splinefun(x, distribution[,2])
   distribution[,3]<-f.fw(x) #winter
   distribution[,4]<-f.fw1(x) #winter after copying
@@ -201,16 +204,16 @@ for (loop_aw in 2){
   time[[1]]<-distribution
 
 
-for (i in 2:30) 
+for (i in 2:10) 
   {sw<-splinefun(x, time[[i-1]][,4])
   distribution[,1]<-f.fax(x) #breeding
   #distribution[,2]<-f.fjx(x) #breeding after copying
-  distribution[,2]<-f.fax(x) #breeding no copying
+  distribution[,2]<-distribution[,1] #breeding no copying
   sb<-splinefun(x, distribution[,2])
   distribution[,3]<-f.fw(x) #winter
   distribution[,4]<-f.fw1(x) #winter after copying
   if(min(distribution[,4]<0)) break
-  distribution[1,5]<-sum(distribution[,4]>0.8)/length(x)
+  distribution[1,5]<-sum(distribution[,4]>0.8)/length(x) #criterion to stop run
   time[[i]]<-distribution
   if(distribution[1,5]>0.33) break}
   
@@ -219,8 +222,8 @@ for (i in 2:30)
 ```
 
     ##   copy_winter copy_breeding dispersal generation
-    ## 1           2             5         1          9
-    ## 2           2             5         2          9
+    ## 1           1             5         1         10
+    ## 2           2             5         1         10
     ## 3          NA            NA        NA         NA
     ## 4          NA            NA        NA         NA
     ## 5          NA            NA        NA         NA
@@ -249,22 +252,27 @@ p3<-p2 +geom_line(aes(y=winter), color=col3) +geom_line(aes(y=winter_copied), co
 plots[[j]] <-p3 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),panel.background = element_blank(), axis.line = element_line(colour = "black"))}
 #ggarrange(plots[[1]], plots[[3]], ncol = 2)
 
-plot(time[[1]]$breeding_adults~x, type="l", col="#5E81B5", bty="l", ylim=c(0,1))
+pal<-c(rainbow(8, alpha = 1, rev = FALSE), "grey","grey","grey", "black", "black", "black")
+
+plot(time[[1]]$breeding_adults~x, type="l", col=pal[8], bty="l", ylim=c(0,1), lwd=2, las=1)
+lines(time[[2]]$breeding_adults~x, col=pal[5], lwd=2)
+lines(time[[3]]$breeding_adults~x, col=pal[3], lwd=2)
+lines(time[[4]]$breeding_adults~x, col=pal[1], lwd=2)
 ```
 
 ![](humei_files/figure-gfm/plotting-1.png)<!-- -->
 
 ``` r
-data<-read.csv("humei_simulations.csv")
+data<-read.csv("humei_simulations3.csv")
 
 #disp2<-subset(data, copy_breeding<6 & dispersal==2)
 #disp05<-subset(data, copy_breeding<6 & dispersal==0.5)
 
-pal<-c(rainbow(8, alpha = 1, rev = FALSE), "grey","grey","grey", "black", "black", "black")
+
 #plot(disp05$copy_winter~disp05$copy_breeding, pch=16, cex=1.5, col=pal[disp05$generation-1], bty="l", xlim=c(0,5.5), ylab="Copying parameter (a), winter", xlab="Copying parameter (a), ")
 #text(disp05$copy_breeding, disp05$copy_winter, as.character(disp05$generation), cex=0.8, col=pal[disp05$generation-1], pos=4)
 
-plot(data$copy_winter~data$dispersal, pch=16, cex=1.5, col=pal[data$generation-1], bty="l", xlim=c(0,2), ylab="Copying parameter, winter", xlab="Dispersal parameter")
+plot(data$copy_winter~data$dispersal, pch=16, cex=1.5, col=pal[data$generation-1], bty="l", xlim=c(0,2.2), ylab="Copying parameter, winter", xlab="Dispersal parameter")
 text(data$dispersal, data$copy_winter, as.character(data$generation), cex=0.8, col=pal[data$generation-1], pos=4)
 ```
 
