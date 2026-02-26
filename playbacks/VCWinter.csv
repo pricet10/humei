@@ -1,0 +1,83 @@
+location,Recording.ID.Number,Date,Playback,Latitude,Longitude,Time,Initial.distance.m.,Year,Song.ID,Response.within.1.minute,Aggressive.Calls,Fly.overs,Direct.approach.towards.the.speaker,Height.at.the.speaker.is.kept.from.the.ground.,Vertical.distance.of.approach,Horizontal.distance.of.approach,Number.of.calls.in.the.first.minute,Number.of.calls.in.the.second,Number.of.calls.in.the.third.minute,Number.of.calls.in.the.fourth.minute,Number.of.calls.in.the.fifth.minute,Total.score.out.of.three,Remarks
+Bharatpur,1,12/15/24,1,27.197946,77.509824,12:28pm,6,1982,0000_82_0504_41935ML Phylloscopus humei India Ben King_1982 EDITED,Yes,1,1,1,NA,NA,NA,NA,NA,NA,NA,NA,3,"Pair of birds observed, stopped calling after buzzing once on 5th minute"
+Bharatpur,112,12/15/24,1,27.197946,77.509824,12:35pm,15,2014,140311_15 Phylloscopus humei Bhindawas Haryana_11 EDITED,No,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,2,
+Bharatpur,2,12/15/24,2,27.196992,77.510396,10:17am,20,1983,0000_83_06xx_Kyrgystan_Svensson_P. humei_022A-WS4368XXXXXX-0107M0_2 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,8,12/15/24,2,27.196992,77.510396,10:00am,20,1989,0000_89_12xx_Nepal_Sebastian_P. humei_022A-W0001X0537XX-0135M0_7 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,Bird was found calling randomly
+Bharatpur,111,12/16/24,3,27.188781,77.500355,10:40am,10,2014,140310_35 Phylloscopus humei Bhindawas Haryana_10 EDITED,No,0,1,1,NA,NA,NA,NA,NA,NA,NA,NA,2,The bird flew away
+Bharatpur,17,12/16/24,4,27.1894,77.500847,11:18am,10,1991,0000_91_0300x_Phylloscopus humei L PA_91_03_653-EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,98,12/16/24,4,27.1894,77.500847,11:10am,8,2012,"121000x_Xinjiang West China_Pholt_Warbler, Hume's Leaf (Xinjiang)(A7241)_3 down sampled EDITED",Yes,1,1,1,NA,NA,NA,NA,NA,NA,NA,NA,3,
+Bharatpur,10,12/16/24,5,27.191989,77.505507,10:46am,2,1990,0000_9001xx_Bharatpur_Sebatian_P. humei_022A-W0001X0537XX-0115M0_8 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,102,12/16/24,5,27.191989,77.505507,9:59am,20,2012,121100x_Sultanpur_MikeNelson_XC116652 - Hume's Leaf Warbler - Phylloscopus humei humei_8 EDITED,Yes,1,1,1,NA,NA,NA,NA,NA,NA,NA,NA,3,
+Bharatpur,113,12/16/24,6,27.191143,77.508963,1:54pm,10,2014,140500x_Kazakhistan_AlbertLastukhin_XC184262 - Hume's Leaf Warbler - Phylloscopus humei_4 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,140,12/16/24,6,27.191143,77.508963,2:01pm,10,2018,180100x_Harike_Hannu_Phylloscopus humei 180131_05_16 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,35,12/16/24,7,27.18305,77.513965,10:47am,20,1994,0000_94_xxxx_Phylloscopus humei_Trevor Price_Loud_humei(1)_Manali 1994 Trevor EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,1,
+Bharatpur,82,12/16/24,7,27.18305,77.513965,10:54am,20,2008,081105_D191Cue 37 Phylloscopus spp Sariska Rajasthan_9 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,67,12/16/24,8,27.158369,77.521232,11:01am,12,2004,041009_Datcut29 Phylloscopus humie IIFM Bhopal Madhya Pradesh EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,111,12/16/24,8,27.158369,77.521232,11:08am,12,2014,140310_35 Phylloscopus humei Bhindawas Haryana_10 EDITED,No,0,0,1,NA,NA,NA,NA,NA,NA,NA,NA,1,May be a female?
+Bharatpur,35,12/17/24,9,27.151814,77.519612,11:31am,10,1994,0000_94_xxxx_Phylloscopus humei_Trevor Price_Loud_humei(1)_Manali 1994 Trevor EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,Called once or twice normally without showing any aggressive response
+Bharatpur,98,12/17/24,9,27.151814,77.519612,11:24am,15,2012,"121000x_Xinjiang West China_Pholt_Warbler, Hume's Leaf (Xinjiang)(A7241)_3 down sampled EDITED",Yes,1,0,1,NA,NA,NA,NA,NA,NA,NA,NA,2,
+Bharatpur,51,12/17/24,10,27.154301,77.521354,12:01pm,17,1999,0000_99_04xx_Himachal_PS_AN4Cue 17 Phylloscopus humei GHNP Himachal 1999 April_98+99_10 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,78,12/17/24,10,27.154301,77.521354,12:08pm,17,2007,070204_D170Cue 83 Phylloscopus humei Badkal_Faridabad Haryana_06+07_10 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,86,12/17/24,11,27.151275,77.524599,2:33pm,8,2009,090402_D195Cue 33 Phylloscopus humei+tytleri Dhanaulti Uttarakhand_9 EDITED,No,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,1,
+Bharatpur,89,12/17/24,11,27.151275,77.524599,2:24pm,10,2010,100215_07 Phylloscopus humei U SOOR SAROVAR AGRA UP_4 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,95,12/17/24,12,27.153909,77.520738,2:48pm,4,2011,110500x_Kazakhistan_ArendWasinck_XC150181 - Hume's Leaf Warbler - Phylloscopus humei humei_4 EDITED,Yes,1,1,1,NA,NA,NA,NA,NA,NA,NA,NA,3,
+Bharatpur,113,12/17/24,12,27.153909,77.520738,2:40pm,9,2014,140500x_Kazakhistan_AlbertLastukhin_XC184262 - Hume's Leaf Warbler - Phylloscopus humei_4 EDITED,No,0,0,1,NA,NA,NA,NA,NA,NA,NA,NA,1,
+Bharatpur,21,12/17/24,13,27.148752,77.518844,3:13pm,10,1992,0000_92_0000_x_Phylloscopus humei Call Bharatpur Ind92 185-230 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,No response even the bird was sitting very close to the speaker
+Bharatpur,39,12/17/24,13,27.148752,77.518844,3:20pm,5,1996,0000_96_02xx_Nepal_Harrap_P. humei_022A-W0001X1726XX-0142M0_96+97_2 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,17,12/17/24,14,27.145798,77.518226,12:33pm,15,1991,0000_91_0300x_Phylloscopus humei L PA_91_03_653-EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,96,12/17/24,14,27.145798,77.518226,12:40pm,15,2011,110500x_Kazakhistan_Patrick Franke_XC120496 - Hume's Leaf Warbler - Phylloscopus humei humei_5 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,51,12/18/24,15,27.165796,77.510672,1:06pm,8,1999,0000_99_04xx_Himachal_PS_AN4Cue 17 Phylloscopus humei GHNP Himachal 1999 April_98+99_10 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,"Calling randomly twice from same tree on which it was spotted, no aggressive resonse at all"
+Bharatpur,190,12/18/24,15,27.165796,77.510672,1:14pm,10,1991,0000_91_02xx_Netherlands_Hans_XC477443 - Hume's Leaf Warbler - Phylloscopus humei EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,10,12/18/24,16,27.164657,77.510511,1:46pm,15,1990,42_0000_9001xx_Bharatpur_Sebatian_P. humei_022A-W0001X0537XX-0115M0_8 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,97,12/18/24,16,27.164657,77.510511,1:39pm,6,2012,35_120200x_Bandhavgarh_Hannu_Phylloscopus humei_120211_01_1 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,No response at all and flew away
+Bharatpur,21,12/18/24,17,27.163121,77.51067,1:43pm,5,1992,32_0000_92_0000_x_Phylloscopus humei Call Bharatpur Ind92 185-230 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,64,12/18/24,17,27.163121,77.51067,1:36pm,10,2002,7_0202xx_Bharatpur_Hannu_Phyhum2D202_01+02_9 EDITED,No,1,0,1,NA,NA,NA,NA,NA,NA,NA,NA,1,Mild response
+Bharatpur,22,12/19/24,18,27.178544,77.518172,10:22am,12,1992,33_0000_92_0100x_Phylloscopus humei L PA_92_01_553 EDITED-,No,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,started calling randomly at the 5th minute and again continued foraging
+Bharatpur,191,12/19/24,18,27.178544,77.518172,10:15am,12,2011,19_110300x_Haryana_MikeNelson_XC73382 - Hume's Leaf Warbler - Phylloscopus humei humei_3 EDITED,No,1,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,Only calling
+Bharatpur,4,12/19/24,19,27.180916,77.516974,11:20am,30,1986,40_0000_86_02xx_Bharatpur_Hansen_P. humei_022A-WS4368XXXXXX-0104M0_3 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,Presence of few other species of warblers observed
+Bharatpur,112,12/19/24,19,27.180916,77.516974,11:27am,20,2014,44_140311_15 Phylloscopus humei Bhindawas Haryana_11 EDITED,No,1,1,1,NA,NA,NA,NA,NA,NA,NA,NA,2,Aggressive response observed
+Bharatpur,93,12/19/24,20,27.185986,77.499434,11:47am,10,2011,18_110200x_Harike_AnteStrand_XC105580 - Hume's Leaf Warbler - Phylloscopus humei_1 EDITED,Yes,0,1,1,NA,NA,NA,NA,NA,NA,NA,NA,2,"No aggressive calls, may be a female?"
+Bharatpur,113,12/19/24,20,27.185986,77.499434,11:41am,15,2014,45_140500x_Kazakhistan_AlbertLastukhin_XC184262 - Hume's Leaf Warbler - Phylloscopus humei_4 EDITED,Yes,1,1,1,NA,NA,NA,NA,NA,NA,NA,NA,3,Very aggressive response
+Bharatpur,72,12/19/24,21,27.186323,77.499743,12:14pm,15,2005,12_050916_D129aCue 23 Phylloscopus spp near Manali Himachal P-humei background_04+05_9 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,111,12/19/24,21,27.186323,77.499743,12:06pm,15,2014,43_140310_35 Phylloscopus humei Bhindawas Haryana_10 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,78,12/19/24,22,27.18412,77.500293,12:25pm,8,2007,14_070204_D170Cue 83 Phylloscopus humei Badkal_Faridabad Haryana_06+07_10 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,103,12/19/24,22,27.18412,77.500293,12:32pm,6,2012,37_121221_35 Phylloscopus humie U KNP_Bharatpur Rajasthan_9 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,Observed random calling in the beginning
+Bharatpur,15,12/19/24,23,27.181552,77.499598,12:45pm,12,1991,27_0000_91_0000_x_Phylloscopus humei call Bharatpur Ind91 2_436-468 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,
+Bharatpur,78,12/19/24,23,27.181552,77.499598,12:52pm,12,2007,14_070204_D170Cue 83 Phylloscopus humei Badkal_Faridabad Haryana_06+07_10 EDITED,No,0,0,0,NA,NA,NA,NA,NA,NA,NA,NA,0,started calling randomly at the end of 5th minute 
+Dehradun,22,2/6/25,24,30.286955,77.973526,9:51,8,1992,0000920100x_Phylloscopus humei L PA_92_01_553-.Table.3.selections_8splits.txt,no,0,0,0,9,4,NA,0,0,0,12,0,0,
+Dehradun,38,1/14/25,24,30.286593,77.973225,11:10,15,1996,2_0000_96_01xx_Bharatpur_Harrap_P. humei_022A-W0001X1735XX-0132M0_96+97_1 EDITED,no,0,0,0,5,NA,NA,0,0,0,0,0,0,
+Dehradun,51,1/14/25,25,30.286593,77.973225,11:18,20,1999,6_0000_99_04xx_Himachal_PS_AN4Cue 17 Phylloscopus humei GHNP Himachal 1999 April_98+99_10 EDITED,Yes,1,0,0,5,NA,NA,5,7,0,0,0,0,
+Dehradun,10,1/11/25,25,30.402244,78.050027,11:36,15,1990,42_0000_9001xx_Bharatpur_Sebatian_P. humei_022A-W0001X0537XX-0115M0_8 EDITED,no,0,0,0,4,NA,NA,0,0,0,0,0,0,
+Dehradun,165,2/2/25,26,30.358179,77.973752,12:33,15,2020,201127_283225171ML Phylloscopus humei.Table.3.selections_8splits.txt,no,1,0,0,5,NA,NA,0,19,0,11,0,1,
+Dehradun,192,1/11/25,26,30.402244,78.050027,11:29,15,2012,22_120500x_Kazakhistan_ArendWassinck_XC150198 - Hume's Leaf Warbler - Phylloscopus humei humei_2 EDITED,no,0,0,0,4,NA,NA,0,0,0,0,0,0,
+Dehradun,74,1/13/25,27,30.283273,77.972068,11:26,10,2006,13_060107_D133Cue 07 Phylloscopus humei U Kathotia Area near Bhopal Madhya Pradesh_06+07_6 EDITED,no,0,0,0,3,NA,NA,0,0,1,0,0,0,No response at all
+Dehradun,86,1/13/25,27,30.283273,77.972068,11:33,20,2009,16_090402_D195Cue 33 Phylloscopus humei+tytleri Dhanaulti Uttarakhand_9 EDITED,no,0,0,0,5,NA,NA,0,0,0,0,0,0,No response from the bird at all
+Dehradun,146,3/11/25,27,30.402034,78.0954,10:06,10,2019,190205_347457461ML Phylloscopus humei.Table.3.selections_8splits.txt,no,0,0,0,3,NA,NA,0,0,0,0,0,0,
+Dehradun,8,1/13/25,28,30.284484,77.971911,12:10,20,1989,41_0000_89_12xx_Nepal_Sebastian_P. humei_022A-W0001X0537XX-0135M0_7 EDITED,no,0,0,0,4,NA,NA,0,0,0,4,0,0,Just few non aggressive calls at the 4th minute
+Dehradun,111,1/13/25,28,30.284484,77.971911,12:04,25,2014,43_140310_35 Phylloscopus humei Bhindawas Haryana_10 EDITED,no,0,0,0,4,NA,NA,0,1,0,0,0,0,"No response from the bird, called once on the 2nd minute"
+Dehradun,96,1/14/25,29,30.286593,77.973225,11:11,12,2011,21_110500x_Kazakhistan_Patrick Franke_XC120496 - Hume's Leaf Warbler - Phylloscopus humei humei_5 EDITED,Yes,1,0,1,4,3,0,0,0,0,0,0,1,"Moved away to a tree 4m away from the speaker at 3rd minute, then approached speaker once again without aggression or call and left again"
+Dehradun,97,1/14/25,29,30.286593,77.973225,11:18,6,2012,35_120200x_Bandhavgarh_Hannu_Phylloscopus humei_120211_01_1 EDITED,Yes,0,0,1,5,2,0,1,0,1,0,0,2,
+Dehradun,89,1/14/25,30,30.286414,77.974379,11:52,10,2010,17_100215_07 Phylloscopus humei U SOOR SAROVAR AGRA UP_4 EDITED,Yes,0,0,1,4,1,1,1,0,0,0,0,1,
+Dehradun,102,1/14/25,30,30.286414,77.974379,11:58,7,2012,24_121100x_Sultanpur_MikeNelson_XC116652 - Hume's Leaf Warbler - Phylloscopus humei humei_8 EDITED,no,1,0,0,4,NA,NA,0,0,0,12,0,1,
+Dehradun,56,1/22/25,31,30.327744,78.136993,11:57,10,2000,8_2000_0408_24p70 Phylloscopus humei FRI Dehradun Uttarakhand_1 EDITED,no,0,0,0,4,NA,NA,0,0,0,0,0,0,
+Dehradun,111,1/22/25,31,30.327744,78.136993,11:50,7,2014,43_140310_35 Phylloscopus humei Bhindawas Haryana_10 EDITED,Yes,1,1,1,3,1,1,4,0,3,0,0,2,
+Dehradun,67,1/23/25,32,30.284509,77.974575,12:49,15,2004,11_041009_Datcut29 Phylloscopus humie IIFM Bhopal Madhya Pradesh EDITED,Yes,0,1,1,4,NA,2,0,55,12,0,0,2,
+Dehradun,102,1/23/25,32,30.284509,77.974575,12:56,15,2012,24_121100x_Sultanpur_MikeNelson_XC116652 - Hume's Leaf Warbler - Phylloscopus humei humei_8 EDITED,no,0,0,0,4,NA,NA,0,0,71,0,0,1,
+Dehradun,169,1/26/25,33,30.34964,77.956877,15:02,12,2021,54_210107_295636581ML Phylloscopus humei EDITED,Yes,1,1,1,3,2,5,44,42,45,41,0,3,
+Dehradun,174,1/26/25,33,30.34964,77.956877,15:08,12,2021,58_210305_MIXPRE-3624 Phylloscopus humei,Yes,1,1,1,3,2,0,15,18,6,0,0,3,
+Dehradun,103,2/23/25,34,30.376917,77.932272,2:41,10,2012,37_121221_35 Phylloscopus humie U KNP_Bharatpur Rajasthan_9 EDITED,no,0,0,0,4,NA,NA,0,0,0,0,0,0,
+Dehradun,178,2/23/25,34,30.376917,77.932272,2:34,22,2022,60_220111_MX661 Phylloscopus humei WII Dehradun EDITED,Yes,1,1,1,4,3,1,26,28,0,18,0,3,Came to the tree in which speaker was kept
+Dehradun,43,2/9/25,35,30.28592,77.97486,11:03,6,1998,"5_0000_98_01xx_Bharatpur_Pholt_Warbler, Hume's (Rajasthan)(CD24-29)_98+99_3 EDITED",no,0,0,0,3,NA,NA,0,0,0,1,0,0,No response at all
+Dehradun,174,2/9/25,35,30.28592,77.97486,10:58,8,2021,58_210305_MIXPRE-3624 Phylloscopus humei,Yes,0,0,0,2,10,0,11,19,0,0,0,2,
+Dehradun,169,2/9/25,36,30.285225,77.973687,9:52,13,2021,54_210107_295636581ML Phylloscopus humei EDITED,Yes,1,1,0,3,NA,7,23,29,0,8,2,2,
+Dehradun,192,2/9/25,36,30.285225,77.973687,9:58,7,2012,22_120500x_Kazakhistan_ArendWassinck_XC150198 - Hume's Leaf Warbler - Phylloscopus humei humei_2 EDITED,no,0,0,0,3,NA,NA,0,0,8,25,0,0,"Presence of Oriental pied hornbill on the same tree, few Hair-crested drongos also were found vocalising"
+Dehradun,22,2/6/25,37,30.286955,77.973526,9:52,12,1992,33_0000_92_0100x_Phylloscopus humei L PA_92_01_553 EDITED-,no,0,0,0,4,NA,NA,0,0,0,13,9,0,Bird started calling after I stopped playback
+Dehradun,138,2/6/25,37,30.286955,77.973526,9:47,7,2018,"47_180000x_Xinjiang_PA_Phylloscopus humei Call Mosuowan, Xinjiang, China XJ2018_1086_6 EDITED",Yes,1,0,1,4,3,0,0,0,0,12,14,1,
+Dehradun,165,2/2/25,38,30.358179,77.973752,12:33,20,2020,52_201127_283225171ML Phylloscopus humei EDITED,no,1,0,0,6,NA,NA,1,19,13,0,2,1,
+Dehradun,183,2/2/25,38,30.358179,77.973752,12:26,30,2022,220616_MixPre-209 Phylloscopus humei EDITED,no,0,0,0,5,NA,NA,0,0,0,0,0,0,
+Dehradun,167,2/2/25,39,30.348973,77.954699,13:13,12,2020,53_201223_367754341ML Phylloscopus humei EDITED,Yes,1,1,0,4,NA,6,0,0,0,10,0,1,
+Dehradun,190,2/2/25,39,30.348973,77.954699,13:19,13,1991,28_0000_91_02xx_Netherlands_Hans_XC477443 - Hume's Leaf Warbler - Phylloscopus humei EDITED,no,0,0,0,3,NA,NA,0,0,0,0,0,0,
+Dehradun,4,2/5/25,40,30.286955,77.973526,9:59,12,1986,40_0000_86_02xx_Bharatpur_Hansen_P. humei_022A-WS4368XXXXXX-0104M0_3 EDITED,no,0,0,0,3,NA,12,0,2,0,1,0,0,
+Dehradun,138,2/5/25,40,30.286955,77.973526,9:52,15,2018,"47_180000x_Xinjiang_PA_Phylloscopus humei Call Mosuowan, Xinjiang, China XJ2018_1086_6 EDITED",no,0,0,0,3,5,0,0,0,0,0,9,0,
+Dehradun,35,3/10/25,41,30.402034,78.0954,10:12,10,1994,1_0000_94_xxxx_Phylloscopus humei_Trevor Price_Loud_humei(1)_Manali 1994 Trevor EDITED,no,0,0,0,3,NA,NA,0,0,0,0,0,0,
+Dehradun,173,3/10/25,41,30.402034,78.0954,10:19,15,2021,56_210221_MIXPRE-3602 Phylloscopus humei WII Dehradun EDITED,no,0,0,0,3,NA,0,0,0,0,0,0,0,

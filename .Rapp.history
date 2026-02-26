@@ -1,0 +1,783 @@
+plot(humei)
+plot(humei[[7]])
+plot(humei[7])
+str(humei)
+plot(humei$seasonal)
+plot(humei)
+plot(humei, max.plot=1)
+help(listfiles)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=0.7, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=3)#
+points(split4$C4~split4$Year, cex=0.7, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=3)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=0.7, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", cex=3)#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=0.7, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=4, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=0.7, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+plit4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=0.7, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", box(lwd = 2))#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=3)#
+points(split4$C4~split4$Year, cex=0.7, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=3)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", )#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+box(lwd = 2)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F)#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+axis(1, lwd = 3)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F)#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+box(lwd = 2)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+box(lwd = 2)
+axis(1, lwd = 2)
+axis(2, lwd = 2)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+summary(lm(split4$C1~split4$Year))
+aov(lm(split4$C1~split4$Year))
+anova(lm(split4$C1~split4$Year))
+load("/Users/pricet/Desktop/alldata_final.rds")
+str<- "#
+Year#
+1982#
+1983#
+1983#
+1986#
+1986#
+1986#
+1986#
+1989#
+1989#
+1990#
+1991#
+1991#
+1991#
+1991#
+1991#
+1991#
+1991#
+1991#
+1991#
+1991#
+1991#
+1992#
+1992#
+1992#
+1992#
+1992#
+1992#
+1992#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1993#
+1994#
+1994#
+1994#
+1994#
+1996#
+1996#
+1997#
+1997#
+1997#
+1997#
+1998#
+1998#
+1998#
+1998#
+1998#
+1998#
+1998#
+1998#
+1998#
+1999#
+1999#
+1999#
+2000#
+2000#
+2000#
+2000#
+2001#
+2001#
+2001#
+2001#
+2001#
+2002#
+2002#
+2002#
+2003#
+2002#
+2004#
+2004#
+2004#
+2004#
+2004#
+2005#
+2005#
+2005#
+2005#
+2006#
+2006#
+2006#
+2007#
+2007#
+2007#
+2008#
+2008#
+2008#
+2008#
+2008#
+2009#
+2009#
+2009#
+2009#
+2009#
+2009#
+2010#
+2010#
+2010#
+2010#
+2010#
+2010#
+2011#
+2011#
+2011#
+2011#
+2012#
+2012#
+2012#
+2012#
+2012#
+2012#
+2012#
+2012#
+2012#
+2013#
+2013#
+2013#
+2013#
+2013#
+2013#
+2013#
+2014#
+2014#
+2014#
+2014#
+2014#
+2014#
+2015#
+2015#
+2015#
+2015#
+2015#
+2015#
+2015#
+2015#
+2015#
+2015#
+2016#
+2016#
+2016#
+2016#
+2016#
+2016#
+2016#
+2016#
+2017#
+2017#
+2017#
+2017#
+2018#
+2018#
+2018#
+2018#
+2018#
+2018#
+2018#
+2018#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2019#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2020#
+2021#
+2021#
+2021#
+2021#
+2021#
+2021#
+2021#
+2021#
+2021#
+2021#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+2022#
+"#
+res<-read.table(textConnection(#
+object = str),  header = TRUE, sep = "", stringsAsFactors = FALSE)
+table(res)
+as.vector(table(res))
+write.csv(as.vector(table(res)), "fred")
+write.table(as.vector(table(res)), "clipboard")
+write.csv(as.vector(table(res)), "freda1.csv")
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec355", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f9787055", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+plot(split4$C1~jitter(split4$Year, 0.3), pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))
+points(split4$C4~jitter(split4$Year, 0.3), cex=1.5, col="#f97870", pch=16)
+plot(split4$C1~jitter(split4$Year, 0.3), pch=16, cex=0.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=0.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec355", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=0.5, col="#f9787055", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec355", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f9787055", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~(split4$Year+0.2), pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year+0.2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~split4$Year, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+x<-split4$Year+0.1
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~split4$Year, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+x2<-split4$Year-1.5
+x<-split4$Year+1.5
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+x2<-split4$Year+1.5#
+ x<-split4$Year-1.5
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+x
+x2<-split4$Year+0.2#
+ x<-split4$Year-0.2
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec388", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f9787088", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec399", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+box(lwd = 2)#
+axis(1, lwd = 2)#
+axis(2, lwd = 2)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+box(lwd = 2)#
+axis(1, lwd = 2)#
+axis(2, lwd = 2)
+split4<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/4split.csv")#
+plot(split4$C1~x, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, Hz", col="#04bec3", bty="l", axes=F, ylim=c(3000,6500))#
+ lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x2, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)
+box(lwd = 2)#
+axis(1, lwd = 2)#
+axis(2, lwd = 2)
+str<-"1982	1992#
+1986	1994#
+1994	2006#
+2001	2016#
+2009	2017#
+2012	2020#
+2018	2022"
+res<-read.table(textConnection(#
+ object = str),  header = F, sep = "", stringsAsFactors = FALSE)
+res
+plot(c(res$V1, 1), c(res$V2,1), type="l")
+plot(c(res$V1, res$V2), c(1,1), type="l")
+c(res$V1, res$V2)
+plot(c(res$V1[1], res$V2[1]), c(1,1), type="l")
+plot(c(res$V1[1], res$V2[1]), c(1,1), type="l", ylim=c(0,1.1))
+for (i in 1:6) lines(c(res$V1[i], res$V2[i]), c(i/0.16,i/0.16))
+for (i in seq(0.3, 0.9, 0.1) lines(c(res$V1[i], res$V2[i]), c(i,i))
+for (i in seq(0.3, 0.9, 0.1)) lines(c(res$V1[i], res$V2[i]), c(i,i))
+i
+for (i in 2:7) lines(c(res$V1[i], res$V2[i]), c(i/8,i/86))
+for (i in 2:7) lines(c(res$V1[i], res$V2[i]), c(i/8,i/8))
+plot(c(res$V1[1], res$V2[1]), c(1,1), type="l", ylim=c(0,1.1))
+for (i in 2:7) lines(c(res$V1[i], res$V2[i]), c(i/8,i/8))
+plot(c(res$V1[1], res$V2[1]), c(1,1), type="l", ylim=c(0,1.1), xlim=c(1980, 2025))
+for (i in 2:7) lines(c(res$V1[i], res$V2[i]), c(i/8,i/8))
+plot(c(res$V1[1], res$V2[1]), c(0.1,0.1), type="l", ylim=c(0,1.1), xlim=c(1980, 2025))
+for (i in 2:7) lines(c(res$V1[i], res$V2[i]), c(i/8,i/8))
+plot(c(res$V1[1], res$V2[1]), c(0.1,0.1), type="l", ylim=c(0,1.1), xlim=c(1980, 2025), lwd=4)
+for (i in 2:7) lines(c(res$V1[i], res$V2[i]), c(i/8,i/8),lwd=4)
+t3<-read.csv("~/Desktop/rfid & camera traps Nainghar/rfid/T3_15&16July.csv")
+str(t3)
+t3<-read.csv("~/Desktop/rfid & camera traps Nainghar/rfid/T3_15&16July.csv")
+str(t3)
+t <- strptime(t3$time, format = "%H:%M:%S")
+secs <- as.numeric(t - as.POSIXct(format(t, "%Y-%m-%d 00:00:00")))
+head(secs)
+d <- as.Date(t3$date)  # ensure Date class#
+as.numeric(d)
+day<-as.integer(as.factor(as.numeric(d)))
+head(day)
+tail(day)
+day1<-subset(t3, day==1)
+nrwo(day1)
+nrow(day1)
+plot(c(1:220~day1$secs))
+plot(c(1:220), day1$secs))
+plot(c(1:220), day1$secs)
+head(day1$secs)
+str(day1)
+plot(c(1:220), secs)
+t3$secs<- as.numeric(t - as.POSIXct(format(t, "%Y-%m-%d 00:00:00")))
+day1<-subset(t3, day==1)
+plot(c(1:220), day1$secs)
+plot(c(1:220)[day1$bird=="3B004C8310"], day1$secs[day1$bird=="3B004C8310"], type="l", xlim=c(1,250))
+table(t3$bird)
+lines(c(1:220)[day1$bird=="3B004C9C9F"], day1$secs[day1$bird=="3B004C9C9F"], col="red")
+points(c(1:220)[day1$bird=="3B004C0310"], day1$secs[day1$bird=="3B004C0310"], col="green", cex=10)
+points(c(1:220)[which(day1$bird=="3B004C0310")], day1$secs[which(day1$bird=="3B004C0310")], col="green", cex=10)
+plot(day1$secs[day1$bird=="3B004C8310"]~c(1:220)[day1$bird=="3B004C8310"], type="l", xlim=c(1,250))
+lines(day1$secs[day1$bird=="3B004C9C9F"]~c(1:220)[day1$bird=="3B004C9C9F"], col="red")
+points(c(1:220)[day1$secs[which(day1$bird=="3B004C0310")~which(day1$bird=="3B004C0310")]], col="green", cex=10)
+points(c(1:220)[day1$secs[which(day1$bird=="3B004C0310")~(c(1:220)[which(day1$bird=="3B004C0310")], col="green", cex=10)
+points(c(1:220)[day1$secs[which(day1$bird=="3B004C0310")]~(c(1:220)[which(day1$bird=="3B004C0310")], col="green", cex=10)
+points(c(1:220)[day1$secs[which(day1$bird=="3B004C0310")]~c(1:220)[which(day1$bird=="3B004C0310")], col="green", cex=10)
+which(day1$bird=="3B004C0310")
+which(day1$bird=="3B004C8310")
+t4<-read.csv("~/Desktop/rfid & camera traps Nainghar/rfid/T4_12_14_July.csv")
+str(t4)
+table(t4$bird)
+data<-read.csv("~/Desktop/current does/currentpapersgrants/elevationPaper2024/combineddatafiles/humeimeasures.csv")
+str(data)
+length(unique(data$nest))
+table(data$sex)
+data<-subset(data, sex="c")
+data<-subset(data, sex=="c")
+length(unique(data$nest))
+data<-subset(data, year<2000 & year<2005)
+length(unique(data$nest))
+data<-read.csv("~/Desktop/current does/currentpapersgrants/elevationPaper2024/combineddatafiles/humeimeasures.csv")
+data<-subset(data, sex="c")
+data<-subset(data, sex=="c")
+data<-read.csv("~/Desktop/current does/currentpapersgrants/elevationPaper2024/combineddatafiles/humeimeasures.csv")
+str(data)
+datasub<-data.frame(data$year, data$site, data$sex, data$weight, data$tarsus)
+head(datasub)
+tail(datasub)
+datasub<-subset(data, data.sex!="c")
+datasub<-subset(datasub, data.sex!="c")
+datasub<-subset(datasub, data.sex=="mn")
+head(datasub)
+datasub<-data.frame(data$year, data$site, data$sex, data$weight, data$tarsus)
+datasub<-subset(datasub, data.sex!="c")
+datasub<-subset(datasub, data.site=="mn")
+head(datasub)
+summary(anova(datasub$data.weight~datasub$data.year))
+summary(aov(datasub$data.weight~datasub$data.year))
+plot(datasub$data.weight~datasub$data.year)
+tail(datasub)
+datasub<-data.frame(data$year, data$site, data$sex, data$weight, data$tarsus)
+datasub<-subset(datasub, data.site=="mn")
+tail(datasub)
+table(datasub$data.year, datasub$data.sex)
+datasub<-subset(datasub, data.sex=="c")
+plot(datasub$data.weight~datasub$data.year)
+datasub<-data.frame(data$year, data$site, data$sex, data$weight, data$tarsus)
+datak<-subset(datasub, data.sex!="c")
+datak<-subset(datak, data.sex!="c")
+plot(datak$data.weight~datak$data.year)
+datak<-subset(datak, data.site=="ks")
+plot(datak$data.weight~datak$data.year)
+datak<-subset(datak, data.weight<8)
+summary(lm(datasub$data.weight~datasub$data.year))
+summary(lm(datak$data.weight~datak$data.year))
+plot(datak$data.weight~datak$data.year)
+(0.009017/6)*100
+datasub<-data.frame(data$year, data$site, data$sex, data$weight, data$tarsus)#
+datamn<-subset(datasub, data.site=="mn")
+datamn<-subset(datamn, data.sex!="c")
+datamn<-subset(datamn, data.weight<8)
+plot(datamn$data.weight~datamn$data.year)
+datamn<-subset(datamn, data.year<2008)
+plot(datamn$data.weight~datamn$data.year)
+summary(lm(datamn$data.weight~datamn$data.year))
+head(data$mn)
+head(datamn)
+plot(datak$data.weight~datak$data.year)
+26*(0.009017/6)*100
+datak$cut<-cut(datak$data.year, c(1980, 2000, 2020))
+summary(aov(datak$data.weight~datak$cut))
+summary(datak$data.weight, by=datak$cut)
+tapply(datak$data.weight, datak$cut, function(x) mean(x, na.rm=T))
+tapply(datak$data.weight, datak$cut, function(x) sum(x, na.rm=T))
+tapply(datak$data.weight, datak$cut, function(x) sum(x[x>0], na.rm=T))
+tapply(datak$data.weight, datak$cut, function(x) sum(x>0, na.rm=T))
+plot(datamn$data.weight~datamn$data.year)
+(5.82-6)/6
+plot(jitter(datamn$data.weight)~datamn$data.year)
+plot(jitter(datamn$data.weight)~datamn$data.year, pch=16, cex=0.5)
+help(jitter)
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5)
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.)")
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.")
+datamn<-subset(datamn, data.weight<7)
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.")
+abline(lm(datamn$data.weight~datamn$data.year))
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.", las=1)
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.", las=1, main="Manali")
+abline(lm(datamn$data.weight~datamn$data.year))
+length(datamn$data.weight)
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.", las=1, main="Manali, N = 239")
+abline(lm(datamn$data.weight~datamn$data.year))
+datak<-subset(datasub, data.sex!="c")#
+datak<-subset(datak, data.site=="ks")#
+datak<-subset(datak, data.weight<7)#
+datak$cut<-cut(datak$data.year, c(1980, 2000, 2020))#
+summary(aov(datak$data.weight~datak$cut))
+length(datak$data.weight)
+plot(jitter(datamn$data.weight, amount=0.05)~datamn$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.", las=1, main="Kashmir, N = 382")
+plot(jitter(datak$data.weight, amount=0.05)~datak$data.year, pch=16, cex=0.5, bty="l", xlab="year", ylab="weight, g.", las=1, main="Kashmir, N = 382")
+summary(t.test(datak$data.weight~datak$cut))
+t.test(datak$data.weight, datak$cut)
+help(t.test)
+t.test(datak$data.weight~datak$cut)
+~/github/humei/Crowther_Nature_Files_Revision_01_WGS84_GeoTiff
+setwd("/Users/pricet/github/humei/Crowther_Nature_Files_Revision_01_WGS84_GeoTiff")
+setwd("/Users/pricet/github/humei")
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=0.7, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=3)#
+points(split4$C4~x, cex=0.7, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=3)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=0.7, col="grey", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=3)#
+axis(side = 2, at = seq(3, 6, by = 1))#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=2, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=3)#
+points(split4$C4~x, cex=2, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=3)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=2, col="grey", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=3)#
+axis(side = 2, at = seq(3, 6, by = 1))#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=3)#
+points(split4$C4~x, cex=1.5, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=3)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="grey", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=3)#
+axis(side = 2, at = seq(3, 6, by = 1))#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x, cex=1.5, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="grey", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=6)#
+axis(side = 2, at = seq(3, 6, by = 1))#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x, cex=1.5, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=6)#
+axis(side = 2, at = seq(3, 6, by = 1))#
+summary(lm(split4$C1~split4$Year))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec355", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f9787055", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D355", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec399", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f9787099", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n", axes = FALSE)#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1))
+axis(1, lwd = 3)          # thick bottom axis#
+axis(2, lwd = 3)
+axis(1, lwd = 3)          # thick bottom axis#
+axis(2, lwd = 3)
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n", axes = FALSE)#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1))
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1), lwd=2)
+axis(side = 1, lwd=2)
+axis(side = 1, lwd=2)
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n", xaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D399", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1), lwd=2)
+axis(side = 1, lwd=2)
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n", xaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=4)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=4)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D3", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=4)#
+axis(side = 2, at = seq(3, 6, by = 1), lwd=2)
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n", xaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D3", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=6)#
+axis(side = 2, at = seq(3, 6, by = 1), lwd=2)
+split4<-read.csv("songmetrics/4split.csv")#
+split4[,7:10]<-split4[,7:10]/1000#
+head(split4[,3:6])#
+x2<-split4$Year+0.2#
+x<-split4$Year-0.2#
+plot(split4$C1~x2, pch=16, cex=1.5, xlab="Year", ylab="Center Frequency, khz", col="#04bec3", bty="l", las=1, ylim=c(3,6.5), yaxt = "n")#
+lines(lowess(split4$C1~split4$Year), col="#04bec3", lwd=6)#
+points(split4$C4~x, cex=1.5, col="#f97870", pch=16)#
+lines(lowess(split4$C4~split4$Year), col="#f97870", lwd=6)#
+points((split4$C3+split4$C2)/2~split4$Year, cex=1.5, col="#D3D3D3", pch=16)#
+lines(lowess((split4$C3+split4$C2)/2~split4$Year), col="grey", lwd=6)#
+axis(side = 2, at = seq(3, 6, by = 1), lwd=2)
+citation (ggplot2)
+citation ("ggplot2")
+citation ("raster")
+citation("lme4")
+citation("sf")
+toBibtex("sf")
+print("sf", bibtex=TRUE)
+citation("auk")
+citation("colorspace")
+citation("viridis")
+data<-read.csv("~/Desktop/current does/currentpapersgrants/humei Call Notes/code and files associated/Humei_Recording.csv")
+str(data)
+table(data$Recording.ID.Number)
+sum(table(data$Recording.ID.Number)==3)
+sum(table(data$Recording.ID.Number)==2)
