@@ -8,15 +8,8 @@ Try executing this chunk by clicking the *Run* button within the chunk
 or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
 
 ``` r
-options(warn = -1)
-library(geodata)
-```
-
-    ## Loading required package: terra
-
-    ## terra 1.8.60
-
-``` r
+#options(warn = -1) this chunck commented out as ebd file had a token in it
+#library(geodata)
 library(sf)
 ```
 
@@ -37,29 +30,23 @@ library(auk) #ebird download
     ## eBird taxonomy version:  2024
 
 ``` r
-ebd_df <- read_ebd("ebd_humwar1_smp_relSep-2025.txt")
-getwd()
+#ebd_df <- read_ebd("ebd_humwar1_smp_relSep-2025.txt")
+
+   
+#month_number <- format(ebd_df$observation_date, "%m")
+#humei_winter<-ebd_df[which(as.integer(month_number)>9 | as.integer(month_number)<4), ]
+#humei_winter<-subset(humei_winter, country=="Nepal" | country=="India" | country=="Bhutan"| country=="Pakistan")
+
+#indiaextent<-c(68, 95, 5,  37)
+#trees<-raster("Crowther_Nature_Biome_Revision_01_WGS84_GeoTiff.tif") #see readme for how to obtain
+#humtrees<-crop(trees, indiaextent)
+#humtrees <- aggregate(humtrees, fun=sum, fact=5) #each cell 0.086*0.086 degrees =28.1 km2
+#humtrees[humtrees<11000]<-1
+#humtrees[humtrees>=11000]<-2
+#plot(humtrees, col=c("grey","green"))
+#x<-sample(62230, 1000)#sample out of ebird
+#points(humei_winter[x,]$latitude~humei_winter[x,]$longitude, pch=16, cex=0.2)
 ```
-
-    ## [1] "/Users/pricet/github/humei"
-
-``` r
-month_number <- format(ebd_df$observation_date, "%m")
-humei_winter<-ebd_df[which(as.integer(month_number)>9 | as.integer(month_number)<4), ]
-humei_winter<-subset(humei_winter, country=="Nepal" | country=="India" | country=="Bhutan"| country=="Pakistan")
-
-indiaextent<-c(68, 95, 5,  37)
-trees<-raster("Crowther_Nature_Biome_Revision_01_WGS84_GeoTiff.tif") #see readme for how to obtain
-humtrees<-crop(trees, indiaextent)
-humtrees <- aggregate(humtrees, fun=sum, fact=5) #each cell 0.086*0.086 degrees =28.1 km2
-humtrees[humtrees<11000]<-1
-humtrees[humtrees>=11000]<-2
-plot(humtrees, col=c("grey","green"))
-x<-sample(62230, 1000)#sample out of ebird
-points(humei_winter[x,]$latitude~humei_winter[x,]$longitude, pch=16, cex=0.2)
-```
-
-![](humei_files/figure-gfm/ebird%20FigS1D-1.png)<!-- -->
 
 ``` r
 hum<-read.csv("humei_files/Phylloscopus_humei.csv")
@@ -76,10 +63,97 @@ ylt2000<-subset(hum, Year<1999.5)
 
 
 ygt2000collapse<-data.frame(tapply(ygt2000$longitude, ygt2000$loc, function(x) mean(x)), tapply(ygt2000$latitude, ygt2000$loc, function(x) mean(x)), tapply(ygt2000$loc, ygt2000$loc, function(x) sum(x>0, na.rm=T)))
+```
 
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+
+``` r
 ylt2000collapse<-data.frame(tapply(ylt2000$longitude, ylt2000$loc, function(x) mean(x)), tapply(ylt2000$latitude, ylt2000$loc, function(x) mean(x)), tapply(ylt2000$loc, ylt2000$loc, function(x) sum(x>0, na.rm=T)))
+```
 
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
+    ## Warning in mean.default(x): argument is not numeric or logical: returning NA
 
+``` r
 colnames(ygt2000collapse)<-c("long", "lat", "count")
 colnames(ylt2000collapse)<-c("long", "lat", "count")
 
@@ -93,6 +167,12 @@ points(ygt2000collapse$long, ygt2000collapse$lat, pch=16, cex=ygt2000collapse$co
 
 ``` r
 pbklocations<-read.csv("playbacks/pbklocation.csv")
+```
+
+    ## Warning in read.table(file = file, header = header, sep = sep, quote = quote, :
+    ## incomplete final line found by readTableHeader on 'playbacks/pbklocation.csv'
+
+``` r
 plot(india, col=z, axes = FALSE, box = FALSE, legend = FALSE)
 ```
 
@@ -107,6 +187,8 @@ text(pbklocations[,3:2], pbklocations[,1], pos=4)
 ![](humei_files/figure-gfm/recording%20and%20playback%20locations,%20figS1A,B,C-3.png)<!-- -->
 
 ``` r
+library(raster)
+library(sf)
 addsaturation<-function(hex, saturation){
 library(colorspace)
 base_hex <- substr(hex, 1, 7)
@@ -119,7 +201,7 @@ new_col <- as(col_hls, "RGB")
 return(hex(new_col))}
 
 #Code for estimating population sizes 
-
+trees<-raster("Crowther_Nature_Biome_Revision_01_WGS84_GeoTiff.tif") #see readme for how to obtain
 #humei shapefile
 #in the terminal we used gdal to extract the humei shapefile
 #ogr2ogr -f GPKG output.gpkg BOTW_2025.gpkg -where " sci_name = 'Phylloscopus humei'"
@@ -155,10 +237,28 @@ mandelli_bbox <- st_as_sfc(st_bbox(c(xmin=87, xmax=120, ymin=15, ymax=42)))
  humeiBdg_bbox<-st_as_sfc(st_bbox(c(xmin=80, xmax=120, ymin=15, ymax=42)))
   st_crs(humeiBdg_bbox)<- st_crs(humei)
 humeimap<-st_difference(humei, mandelli_bbox)
+```
+
+    ## Warning: attribute variables are assumed to be spatially constant throughout
+    ## all geometries
+
+``` r
 #plot(humeimap, max.plot=1)
 humeiBdg<-subset(humeimap, seasonal==2)
 humeiBdg<-st_difference(humeiBdg, humeiBdg_bbox)
+```
+
+    ## Warning: attribute variables are assumed to be spatially constant throughout
+    ## all geometries
+
+``` r
 humeiwin<-subset(humeimap, seasonal==3, max.plot=1)
+```
+
+    ## Warning: In subset.data.frame(humeimap, seasonal == 3, max.plot = 1) :
+    ##  extra argument 'max.plot' will be disregarded
+
+``` r
 #plot(humeiBdg, col="#99D7F6", add=T, border=NA)
 #plot(humeiwin, col="#F5C0CA", add=T, border=NA)
 
@@ -259,6 +359,12 @@ fitpoisson <- glmer(Total.score.out.of.three~Year+(1|Recording.ID.Number)+(1|Pla
 summary(fitpoisson)
 ```
 
+    ## Warning in vcov.merMod(object, use.hessian = use.hessian): variance-covariance matrix computed from finite-difference Hessian is
+    ## not positive definite or contains NA values: falling back to var-cov estimated from RX
+
+    ## Warning in vcov.merMod(object, correlation = correlation, sigm = sig): variance-covariance matrix computed from finite-difference Hessian is
+    ## not positive definite or contains NA values: falling back to var-cov estimated from RX
+
     ## Generalized linear mixed model fit by maximum likelihood (Laplace
     ##   Approximation) [glmerMod]
     ##  Family: poisson  ( log )
@@ -294,7 +400,25 @@ summary(fitpoisson)
 
 ``` r
 fitCall <- glmer(Aggressive.Calls~Year+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=binomial)
+```
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
+    ## Model failed to converge with max|grad| = 0.188766 (tol = 0.002, component 1)
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model is nearly unidentifiable: very large eigenvalue
+    ##  - Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio
+    ##  - Rescale variables?
+
+``` r
 fitfly <- glmer(Fly.overs~Year+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=binomial)
+```
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model failed to converge with max|grad| = 0.386873 (tol = 0.002, component 1)
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model is nearly unidentifiable: very large eigenvalue
+    ##  - Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio
+    ##  - Rescale variables?
+
+``` r
 fitappr <- glmer(Direct.approach.towards.the.speaker~Year+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=binomial)
 ```
 
@@ -350,6 +474,12 @@ fitpoisson <- glmer(Total.score.out.of.three~Year+(1|Playback),data=playbk,famil
 summary(fitpoisson)
 ```
 
+    ## Warning in vcov.merMod(object, use.hessian = use.hessian): variance-covariance matrix computed from finite-difference Hessian is
+    ## not positive definite or contains NA values: falling back to var-cov estimated from RX
+
+    ## Warning in vcov.merMod(object, correlation = correlation, sigm = sig): variance-covariance matrix computed from finite-difference Hessian is
+    ## not positive definite or contains NA values: falling back to var-cov estimated from RX
+
     ## Generalized linear mixed model fit by maximum likelihood (Laplace
     ##   Approximation) [glmerMod]
     ##  Family: poisson  ( log )
@@ -384,6 +514,11 @@ summary(fitpoisson)
 ``` r
 playbk<-read.csv("playbacks/VCSummer.csv")
 library(ggplot2)
+```
+
+    ## Warning: package 'ggplot2' was built under R version 4.4.3
+
+``` r
 library(viridis)
 ```
 
@@ -432,6 +567,15 @@ p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(
 ``` r
 pratap$recording<-as.factor(pratap$Recording.ID)
 fit_bin <- glmer(Response~Year+(1|recording)+(1|male),data=pratap,family=binomial)
+```
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
+    ## Model failed to converge with max|grad| = 0.165134 (tol = 0.002, component 1)
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model is nearly unidentifiable: very large eigenvalue
+    ##  - Rescale variables?
+
+``` r
 summary(fit_bin)
 ```
 

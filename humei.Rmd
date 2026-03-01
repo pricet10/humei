@@ -19,27 +19,27 @@ knitr::opts_knit$set(root.dir = "~/github/humei")
 
 
 ```{r ebird FigS1D}
-options(warn = -1)
-library(geodata)
+#options(warn = -1) this chunck commented out as ebd file had a token in it
+#library(geodata)
 library(sf)
 library(raster)
 library(auk) #ebird download
-ebd_df <- read_ebd("ebd_humwar1_smp_relSep-2025.txt")
-getwd()
-   
-month_number <- format(ebd_df$observation_date, "%m")
-humei_winter<-ebd_df[which(as.integer(month_number)>9 | as.integer(month_number)<4), ]
-humei_winter<-subset(humei_winter, country=="Nepal" | country=="India" | country=="Bhutan"| country=="Pakistan")
+#ebd_df <- read_ebd("ebd_humwar1_smp_relSep-2025.txt")
 
-indiaextent<-c(68, 95, 5,  37)
-trees<-raster("Crowther_Nature_Biome_Revision_01_WGS84_GeoTiff.tif") #see readme for how to obtain
-humtrees<-crop(trees, indiaextent)
-humtrees <- aggregate(humtrees, fun=sum, fact=5) #each cell 0.086*0.086 degrees =28.1 km2
-humtrees[humtrees<11000]<-1
-humtrees[humtrees>=11000]<-2
-plot(humtrees, col=c("grey","green"))
-x<-sample(62230, 1000)#sample out of ebird
-points(humei_winter[x,]$latitude~humei_winter[x,]$longitude, pch=16, cex=0.2)
+   
+#month_number <- format(ebd_df$observation_date, "%m")
+#humei_winter<-ebd_df[which(as.integer(month_number)>9 | as.integer(month_number)<4), ]
+#humei_winter<-subset(humei_winter, country=="Nepal" | country=="India" | country=="Bhutan"| country=="Pakistan")
+
+#indiaextent<-c(68, 95, 5,  37)
+#trees<-raster("Crowther_Nature_Biome_Revision_01_WGS84_GeoTiff.tif") #see readme for how to obtain
+#humtrees<-crop(trees, indiaextent)
+#humtrees <- aggregate(humtrees, fun=sum, fact=5) #each cell 0.086*0.086 degrees =28.1 km2
+#humtrees[humtrees<11000]<-1
+#humtrees[humtrees>=11000]<-2
+#plot(humtrees, col=c("grey","green"))
+#x<-sample(62230, 1000)#sample out of ebird
+#points(humei_winter[x,]$latitude~humei_winter[x,]$longitude, pch=16, cex=0.2)
 ```
 
 ```{r recording and playback locations, figS1A,B,C}
@@ -80,6 +80,8 @@ text(pbklocations[,3:2], pbklocations[,1], pos=4)
 
 ```{r population sizes}
 
+library(raster)
+library(sf)
 addsaturation<-function(hex, saturation){
 library(colorspace)
 base_hex <- substr(hex, 1, 7)
@@ -92,7 +94,7 @@ new_col <- as(col_hls, "RGB")
 return(hex(new_col))}
 
 #Code for estimating population sizes 
-
+trees<-raster("Crowther_Nature_Biome_Revision_01_WGS84_GeoTiff.tif") #see readme for how to obtain
 #humei shapefile
 #in the terminal we used gdal to extract the humei shapefile
 #ogr2ogr -f GPKG output.gpkg BOTW_2025.gpkg -where " sci_name = 'Phylloscopus humei'"
