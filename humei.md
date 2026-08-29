@@ -8,7 +8,7 @@ Try executing this chunk by clicking the *Run* button within the chunk
 or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
 
 ``` r
-#options(warn = -1) this chunck commented out as ebd file had a token in it
+#options(warn = -1) this chunk commented out as ebd file had a token in it
 #library(geodata)
 library(sf)
 ```
@@ -343,7 +343,8 @@ library(lme4)
 
 ``` r
 playbk<-read.csv("playbacks/VCWinter.csv")
-recordings<-read.csv("humei_files/Phylloscopus_humei.csv")
+#recordings<-read.csv("humei_files/Phylloscopus_humei.csv")
+recordings<-read.csv("playbacks/Playbackfilescallrateandnoise.csv")
 #str(playbk)
 #str(recordings)
 recordings<-recordings[,c(2,4)]
@@ -399,11 +400,38 @@ summary(fitpoisson)
     ## boundary (singular) fit: see help('isSingular')
 
 ``` r
+#confounds tests
+fitpoisson <- glmer(Total.score.out.of.three~Year+Number.of.Calls+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=poisson)
+```
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
+    ## unable to evaluate scaled gradient
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
+    ## Model failed to converge: degenerate Hessian with 1 negative eigenvalues
+
+``` r
+playbk$rate<-playbk$Number.of.Calls/playbk$duration...seconds.
+fitpoisson <- glmer(Total.score.out.of.three~Year+rate+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=poisson)
+```
+
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
+    ## unable to evaluate scaled gradient
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
+    ## Model failed to converge: degenerate Hessian with 1 negative eigenvalues
+
+``` r
+fitpoisson <- glmer(Total.score.out.of.three~Year+Number.of.Calls/extranuous.sounds+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=poisson)
+```
+
+    ## boundary (singular) fit: see help('isSingular')
+
+``` r
 fitCall <- glmer(Aggressive.Calls~Year+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=binomial)
 ```
 
     ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
-    ## Model failed to converge with max|grad| = 0.188766 (tol = 0.002, component 1)
+    ## Model failed to converge with max|grad| = 0.18867 (tol = 0.002, component 1)
 
     ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model is nearly unidentifiable: very large eigenvalue
     ##  - Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio
@@ -413,7 +441,7 @@ fitCall <- glmer(Aggressive.Calls~Year+(1|Recording.ID.Number)+(1|Playback),data
 fitfly <- glmer(Fly.overs~Year+(1|Recording.ID.Number)+(1|Playback),data=playbk,family=binomial)
 ```
 
-    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model failed to converge with max|grad| = 0.386873 (tol = 0.002, component 1)
+    ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model failed to converge with max|grad| = 0.38671 (tol = 0.002, component 1)
     ## Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, : Model is nearly unidentifiable: very large eigenvalue
     ##  - Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio
     ##  - Rescale variables?
@@ -538,19 +566,36 @@ p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(
 ![](humei_files/figure-gfm/playback_plots-1.png)<!-- -->
 
 ``` r
-#binomial fits to VC winter, Aggressive.Calls OR Fly.overs OR Direct.approach.towards.the.speaker
+p2<-p2+ylim(0,5)
+p3<-prettyplot(p2, "Year of recording", "Response")
+p3
+```
+
+![](humei_files/figure-gfm/playback_plots-2.png)<!-- -->
+
+``` r
+#binomial fits to VC winter, Aggressive.Calls OR Fly.overs OR Direct.approach.towards.the.speaker; or soces on 1-3, with poisson fit, as shown here
 
 
 playbk<-read.csv("playbacks/VCWinter.csv")
-p1<-ggplot(playbk, aes(x=Year,y=Direct.approach.towards.the.speaker))
-p2<-p1+ geom_count(aes(fill="#A4A4A433", alpha=0.5), shape = 21,colour = "black") +stat_smooth(method = "glm", formula = y ~ x,method.args = list(family = "binomial"))
+p1<-ggplot(playbk, aes(x=Year,y=Total.score.out.of.three))
+p2<-p1+ geom_count(aes(fill="#A4A4A433", alpha=0.5), shape = 21,colour = "black") +stat_smooth(method = "glm", formula = y ~ x,method.args = list(family = "poisson"))
 p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.background = element_blank(), axis.line = element_line(colour = "black"))+theme(legend.position = "none",
     axis.text.x  = element_text(size = 16),  # x tick labels
     axis.text.y  = element_text(size = 16)   # y tick labels
+    
   )
 ```
 
-![](humei_files/figure-gfm/binmial%20fits%20Fig%20S3C,E,F-1.png)<!-- -->
+![](humei_files/figure-gfm/binomial%20fits%20Fig%20S3C,E,F-1.png)<!-- -->
+
+``` r
+p2<-p2+ylim(0,5)
+p3<-prettyplot(p2, "Year of recording", "Response")
+p3
+```
+
+![](humei_files/figure-gfm/binomial%20fits%20Fig%20S3C,E,F-2.png)<!-- -->
 
 ``` r
 pratap<-read.csv("playbacks/PSWinter.csv")
@@ -664,6 +709,116 @@ summary(lm(split4$C1~split4$Year))
     ## Multiple R-squared:  0.4337, Adjusted R-squared:  0.431 
     ## F-statistic: 162.4 on 1 and 212 DF,  p-value: < 2.2e-16
 
+``` r
+whole<-read.csv("~/github/humei/songmetrics/HumeiWholesongs.csv")
+whole<-subset(whole, Call.type!="xx")
+
+p3<-ggplot(whole, aes(x=Year,y=Center.Freq..Hz.))
+p4<-p3 + geom_smooth() +geom_point(aes(colour = Call.type), size=1.8)
+p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+  panel.background = element_blank(), legend.position="none", axis.line = element_line(colour = "black"))
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](humei_files/figure-gfm/fig%202C&D-1.png)<!-- -->
+
+``` r
+p3<-ggplot(whole, aes(x=Year,y=Delta.Time..s.))
+p4<-p3 + geom_smooth() +geom_point(aes(colour = Call.type), size=1.8)
+p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+  panel.background = element_blank(), legend.position="none", axis.line = element_line(colour = "black"))
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](humei_files/figure-gfm/fig%202C&D-2.png)<!-- -->
+
+``` r
+p4
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](humei_files/figure-gfm/fig%202C&D-3.png)<!-- -->
+
+``` r
+#y is center freqy, x is time
+conc_exc<-function(y){
+ z<-y[2:length(y)]-y[1:(length(y)-1)]
+ x1<-z[which(y[2:length(y)]-y[1:(length(y)-1)]!=0)]
+ concavity<-0
+ for(i in 2: length(x1)) if(x1[i-1]*x1[i]<0) concavity=concavity+1
+ excursion<-sum(abs(y[1:(length(y)-1)]-y[2:(length(y))]), na.rm=T)
+ return(data.frame(concavity, excursion))}
+  
+
+names<-list.files("concavity/Humei_milisecond_splits")
+results<-as.data.frame(matrix(nrow=length(names), ncol=5))
+colnames(results)<-c("name", "concavityraw", "excursion","concavityspline0.6", "time")
+
+
+setwd("~/github/humei/concavity/Humei_milisecond_splits")
+for (i in 1:length(names)) {file<-read.table(names[i], skip=1, col.names=c("Selection","View","View2","Channel","Begin Time (s)","End Time (s)","Low Freq (Hz)","High Freq (Hz)","Center Freq (Hz)","Peak Freq (Hz)"))
+#plot(file$Begin.Time..s., file$Center.Freq..Hz., type="l")
+res<-conc_exc(file$Center.Freq..Hz.)
+model<-smooth.spline(file$Begin.Time..s., file$Center.Freq..Hz., spar=0.6)
+resSpline<-conc_exc(model$y)[1]
+tottime<-file$End.Time..s.[nrow(file)]-file$Begin.Time..s.[1]
+results[i,]<- data.frame(names[i], res, resSpline, tottime)}
+
+years<-read.csv("~/github/humei/concavity/Fileyears.csv")
+results<-merge(results, years)
+
+p1<-ggplot(results, aes(x=year,y=excursion))
+p2<-p1+ geom_count(aes(fill="#A4A4A433", alpha=0.5), shape = 21,colour = "black") +geom_smooth(method = lm)
+p3<-prettyplot(p2, "Year", "Excursion")
+
+p1<-ggplot(results, aes(x=year,y=concavityspline0.6))
+p2<-p1+ geom_count(aes(fill="#A4A4A433", alpha=0.5), shape = 21,colour = "black") +stat_smooth(formula = y ~ x)
+p2 + theme(
+    axis.text.x  = element_text(size = 24),  # x tick labels
+    axis.text.y  = element_text(size = 24)   # y tick labels
+  )
+```
+
+    ## `geom_smooth()` using method = 'loess'
+
+![](humei_files/figure-gfm/excursion%20and%20concavity-1.png)<!-- -->
+
+``` r
+p3<-prettyplot(p2, "Year", "Concavity")
+
+results$stdconcavity<-results$concavityspline0.6/results$time
+results$stdconcavity[results$stdconcavity>60]<-"NA"
+results$stdconcavity<-as.numeric(results$stdconcavity)
+```
+
+    ## Warning: NAs introduced by coercion
+
+``` r
+p1<-ggplot(results, aes(x=year,y=stdconcavity))
+p2<-p1+ geom_count(aes(fill="#A4A4A433", alpha=0.5), shape = 21,colour = "black") +stat_smooth(formula = y ~ x)
+p2 + theme(
+    axis.text.x  = element_text(size = 24),  # x tick labels
+    axis.text.y  = element_text(size = 24)   # y tick labels
+  )
+```
+
+    ## Warning: Removed 2 rows containing non-finite outside the scale range
+    ## (`stat_sum()`).
+
+    ## `geom_smooth()` using method = 'loess'
+
+    ## Warning: Removed 2 rows containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+![](humei_files/figure-gfm/excursion%20and%20concavity-2.png)<!-- -->
+
+``` r
+p3<-prettyplot(p2, "Year", "Standardized Concavity")
+```
+
 ``` call
 twelve<-read.csv("songmetrics/12split.csv")
 twelvemeans<-apply(twelve[,18:29], 1, mean)
@@ -673,7 +828,7 @@ out<-data.frame(res$scores[,1:2], twelve)
 
 #str(out)
 p3<-ggplot(out, aes(x=Comp.1,y=Comp.2,color= Decades))
-p4<-p3 + geom_point() +stat_ellipse(level=0.67)
+p4<-p3 + geom_smooth(method = lm)
 p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
   panel.background = element_blank(), axis.line = element_line(colour = "black"))
 ```
