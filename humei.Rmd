@@ -318,7 +318,7 @@ p3<-ggplot(whole, aes(x=Year,y=Center.Freq..Hz.))
 p4<-p3 + geom_smooth() +geom_point(aes(colour = Call.type), size=1.8)
 p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
   panel.background = element_blank(), legend.position="none", axis.line = element_line(colour = "black"))
-
+p4
 
 p3<-ggplot(whole, aes(x=Year,y=Delta.Time..s.))
 p4<-p3 + geom_smooth() +geom_point(aes(colour = Call.type), size=1.8)

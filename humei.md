@@ -724,6 +724,14 @@ p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(
 ![](humei_files/figure-gfm/fig%202C&D-1.png)<!-- -->
 
 ``` r
+p4
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+![](humei_files/figure-gfm/fig%202C&D-2.png)<!-- -->
+
+``` r
 p3<-ggplot(whole, aes(x=Year,y=Delta.Time..s.))
 p4<-p3 + geom_smooth() +geom_point(aes(colour = Call.type), size=1.8)
 p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
@@ -732,7 +740,7 @@ p4 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](humei_files/figure-gfm/fig%202C&D-2.png)<!-- -->
+![](humei_files/figure-gfm/fig%202C&D-3.png)<!-- -->
 
 ``` r
 p4
@@ -740,7 +748,7 @@ p4
 
     ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
 
-![](humei_files/figure-gfm/fig%202C&D-3.png)<!-- -->
+![](humei_files/figure-gfm/fig%202C&D-4.png)<!-- -->
 
 ``` r
 #y is center freqy, x is time
